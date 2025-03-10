@@ -1,0 +1,34 @@
+/* Write your CSS here */
+.box-8 {
+  width: 95%;
+  padding: 20px;
+  background-color: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*removable*/
+  border-radius: 10px;
+}
+.players-details-heading1 {
+  color: white;
+  font-size: 15px;
+}
+.players-details-heading2 {
+  color: white;
+  font-size: 25px;
+}
+.players-details-heading3 {
+  color: white;
+  font-size: 20px;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.logo-8 {
+  width: 10%;
+  margin-left: 0px;
+  padding-left: 0px;
+  height: 10%;
+}

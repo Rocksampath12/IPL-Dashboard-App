@@ -1,0 +1,25 @@
+/* Write your CSS here */
+.team-matches-container {
+  background-image: linear-gradient(to top, #1e293b, #a4261d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-match-container-main-box {
+  width: 90%;
+}
+.banner-img {
+  width: 100%;
+}
+.latest-match-details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-8 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

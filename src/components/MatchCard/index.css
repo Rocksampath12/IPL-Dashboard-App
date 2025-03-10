@@ -1,0 +1,28 @@
+/* Write your CSS here */
+.list-item {
+  background-color: #1e293b;
+  width: 30%;
+  padding: 10px; /* or 20px*/
+  border-radius: 10px;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.list-item-img {
+  width: 10%;
+}
+.list-item-team-name {
+  color: white;
+  font-size: 25px;
+}
+.list-item-result {
+  color: white;
+}
+.list-item-won-or-lose {
+  font-size: 20px;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
