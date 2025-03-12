@@ -24,39 +24,44 @@ class TeamMatches extends Component {
     const response = await fetch(url)
     const obj = await response.json()
 
-    const {team_banner_url, latest_match_details, recent_matches} = obj
+    // const {team_banner_url, latest_match_details, recent_matches} = obj
+    const teamBannerUrl = obj.team_banner_url
+    const latestMatchDetails = obj.latest_match_details
+    const recentMatches = obj.recent_matches
+    console.log(obj)
+    // team_banner_url, latest_match_details, recent_matches change
 
     const updatedLatestMatchDetails = {
-      umpires: latest_match_details.umpires,
-      result: latest_match_details.result,
-      manOfTheMatch: latest_match_details.man_of_the_match,
-      id: latest_match_details.id,
-      date: latest_match_details.date, 
-      venue: latest_match_details.venue,
-      competingTeam: latest_match_details.competing_team,
-      competingTeamLogo: latest_match_details.competing_team_logo,
-      firstInnings: latest_match_details.first_innings,
-      secondInnings: latest_match_details.second_innings,
-      matchStatus: latest_match_details.match_status,
+      umpires: latestMatchDetails.umpires,
+      result: latestMatchDetails.result,
+      manOfTheMatch: latestMatchDetails.man_of_the_match,
+      id: latestMatchDetails.id,
+      date: latestMatchDetails.date,
+      venue: latestMatchDetails.venue,
+      competingTeam: latestMatchDetails.competing_team,
+      competingTeamLogo: latestMatchDetails.competing_team_logo,
+      firstInnings: latestMatchDetails.first_innings,
+      secondInnings: latestMatchDetails.second_innings,
+      matchStatus: latestMatchDetails.match_status,
     }
 
-    const updatedRecentMatchData = recent_matches.map(match => ({
-      umpires: match.umpires,
-      result: match.result,
-      manOfTheMatch: match.man_of_the_match,
-      id: match.id,
-      date: match.date,
-      venue: match.venue,
-      competingTeam: match.competing_team,
-      competingTeamLogo: match.competing_team_logo,
-      firstInnings: match.first_innings,
-      secondInnings: match.second_innings,
-      matchStatus: match.match_status,
+    const updatedRecentMatchData = recentMatches.map(obj8 => ({
+      umpires: obj8.umpires,
+      result: obj8.result,
+      manOfTheMatch: obj8.man_of_the_match,
+      id: obj8.id,
+      date: obj8.date,
+      venue: obj8.venue,
+      competingTeam: obj8.competing_team,
+      competingTeamLogo: obj8.competing_team_logo,
+      firstInnings: obj8.first_innings,
+      secondInnings: obj8.second_innings,
+      matchStatus: obj8.match_status,
     }))
 
     this.setState({
       isLoader: false,
-      teamLogo: team_banner_url,
+      teamLogo: teamBannerUrl,
       latestMatch: updatedLatestMatchDetails,
       recentMatchesDetails: updatedRecentMatchData,
     })

@@ -18,7 +18,8 @@ const LatestMatch = props => {
     <div className="box-8">
       <div>
         <p className="players-details-heading2 left">{competingTeam}</p>
-        <p className="players-details-heading3 left">{date}</p> {/* FIXED DATE */}
+        <p className="players-details-heading3 left">{date}</p>{' '}
+        {/* FIXED DATE */}
         <p className="players-details-heading1 left">{venue}</p>
         <p className="players-details-heading1 left">{result}</p>
       </div>
